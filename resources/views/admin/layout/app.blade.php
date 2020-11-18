@@ -143,18 +143,18 @@
             <div class="nav-link">
               <div class="profile-name">
                 <p class="name">
-                  Welcome 
+                  Welcome
                 </p>
                 <p class="designation">
-                    
+
                 </p>
               </div>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{{url('admin/courses')}}">
               <i class="fa fa-puzzle-piece menu-icon"></i>
-              <span class="menu-title">owner login approvel</span>
+              <span class="menu-title">Courses</span>
             </a>
           </li>
           <li class="nav-item">

@@ -18,3 +18,10 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::view('/','admin.dashboard');
+
+Route::group(['prefix' => 'admin'], function () {
+    Route::get('/courses','CourseController@index');
+    Route::view('/add-course','admin.addCourse');
+    Route::post('/add-course','CourseController@addCourse');
+    Route::get('/delete-course/{id}','CourseController@delete');
+});
