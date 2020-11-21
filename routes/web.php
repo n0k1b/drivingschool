@@ -23,5 +23,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/courses','CourseController@index');
     Route::view('/add-course','admin.addCourse');
     Route::post('/add-course','CourseController@addCourse');
+    Route::get('/edit-course/{id}','CourseController@editCourse');
+    Route::post('/update-course','CourseController@updateCourse');
     Route::get('/delete-course/{id}','CourseController@delete');
 });

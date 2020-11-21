@@ -46,7 +46,7 @@
                         <td>{{$course->price}}</td>
                         <td>{{$course->description}}</td>
                         <td>
-                            <button class="btn btn-warning">Edit</button>
+                            <a class="btn btn-warning" href="{{url('admin/edit-course/'.$course->id)}}">Edit</a>
                         </td>
                         <td>
                             <a class="btn btn-danger" href="{{url('admin/delete-course/'.$course->id)}}">Delete</a>

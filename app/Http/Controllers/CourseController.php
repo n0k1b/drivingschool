@@ -31,4 +31,21 @@ class CourseController extends Controller
         $course->delete();
         return redirect()->back()->with('message','Course deleted successfully');
     }
+    public function editCourse(Request $Request)
+    {
+        return view('admin.editCourse',['course'=>course::where('id',$Request->id)->first()]);
+    }
+    public function updateCourse(Request $Request)
+    {
+        $course = course::where('id',$Request->id)->first();
+        $image = $course->image;
+        if ($Request->hasFile('image')) {
+            unlink('images/'.$course->image);
+            $image = time().'.'.$Request->image->extension();
+            $Request->image->move(public_path('../images/'),$image);
+            $Request->image = $image;
+        }
+        $course->update(['title'=>$Request->title,'duration'=>$Request->duration,'description'=>$Request->description,'image'=>$image,'price'=>$Request->price]);
+        return redirect('admin/courses')->with('message','Course updated successfully');
+    }
 }

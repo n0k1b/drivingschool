@@ -200,7 +200,7 @@
   <script src="{{ asset('assets/melody') }}/js/dashboard.js"></script>
   <!-- End custom js for this page-->
   <!-- Custom js for this page-->
-  @yield('page-js')
+  @yield('js')
   <!-- End custom js for this page-->
 </body>
 
