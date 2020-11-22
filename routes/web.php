@@ -42,4 +42,14 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/edit-instructor/{id}','InstructorController@edit');
     Route::post('/update-instructor','InstructorController@update');
     Route::get('/delete-instructor/{id}','InstructorController@delete');
+
+    Route::get('/fees','feeController@index');
+    Route::get('/add-fee',function()
+    {
+        return view('admin.addfee',['courses'=>\App\Models\course::all()]);
+    });
+    Route::post('/add-fee','feeController@add');
+    Route::get('/edit-fee/{id}','feeController@edit');
+    Route::post('/update-fee','feeController@update');
+    Route::get('/delete-fee/{id}','feeController@delete');
 });
