@@ -158,15 +158,21 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{{url('admin/instructors')}}">
               <i class="fa fa-home menu-icon"></i>
-              <span class="menu-title">Owner post approval</span>
+              <span class="menu-title">Instructors</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="fab fa-trello menu-icon"></i>
-              <span class="menu-title">commisiion</span>
+            <a class="nav-link" href="{{url('admin/demoquestions')}}">
+              <i class="fa fa-home menu-icon"></i>
+              <span class="menu-title">Demo questions</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url('admin/fees')}}">
+              <i class="fa fa-home menu-icon"></i>
+              <span class="menu-title">Fees</span>
             </a>
           </li>
         </ul>

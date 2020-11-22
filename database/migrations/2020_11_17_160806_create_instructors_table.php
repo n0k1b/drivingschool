@@ -17,7 +17,7 @@ class CreateInstructorsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('gender');
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->string('description');
             $table->timestamps();
         });

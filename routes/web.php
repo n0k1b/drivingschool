@@ -26,4 +26,20 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/edit-course/{id}','CourseController@editCourse');
     Route::post('/update-course','CourseController@updateCourse');
     Route::get('/delete-course/{id}','CourseController@delete');
+
+
+    Route::get('/demoquestions','DemoQuestionController@index');
+    Route::view('/add-demoquestion','admin.addDemoquestion');
+    Route::post('/add-demoquestion','DemoQuestionController@add');
+    Route::get('/edit-demoquestion/{id}','DemoQuestionController@edit');
+    Route::post('/update-demoquestion','DemoQuestionController@update');
+    Route::get('/delete-demoquestion/{id}','DemoQuestionController@delete');
+
+
+    Route::get('/instructors','InstructorController@index');
+    Route::view('/add-instructor','admin.addInstructor');
+    Route::post('/add-instructor','InstructorController@add');
+    Route::get('/edit-instructor/{id}','InstructorController@edit');
+    Route::post('/update-instructor','InstructorController@update');
+    Route::get('/delete-instructor/{id}','InstructorController@delete');
 });
