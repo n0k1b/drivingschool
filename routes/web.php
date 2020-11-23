@@ -16,8 +16,11 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+Route::view('/','home');
+Route::view('feature','feature');
+Route::view('course','course');
 
-Route::view('/','admin.dashboard');
+Route::view('admin','admin.dashboard');
 
 Route::group(['prefix' => 'admin'], function () {
     Route::get('/courses','CourseController@index');
