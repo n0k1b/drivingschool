@@ -7,6 +7,11 @@ use App\Models\course;
 
 class CourseController extends Controller
 {
+
+    public function view_course()
+    {
+        return view('course',['courses'=>course::all()]);
+    }
     public function index()
     {
         return view('admin.courses',['courses'=>course::all()]);

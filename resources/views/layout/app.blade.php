@@ -290,30 +290,28 @@
                         </div>
                         <div class="popup__body">
                             <div class="popup_protect__top row">
-                                <div class="popup_protect__img col col-lg-4 col-md-5">
-                                    <div><img src="{{asset('assets')}}/images/course/card1.jpg" alt="" /></div>
-                                </div>
+                               
                                 <div class="popup_protect__data col-lg-8 col-md-7">
                                     <div class="popup_protect__def row">
                                         <div class="popup_protect__def__img col">
                                             <img src="{{asset('assets')}}/images/shield.png" alt="" />
                                         </div>
                                         <div class="popup_protect__def__text col">
-                                            <div class="popup_protect__def__title">How to protect yourself and the car</div>
-                                            <div class="popup_protect__def__days">30 days</div>
+                                            <div class="popup_protect__def__title">How to pay fee</div>
+                                            
                                         </div>
                                     </div>
                                     <ul class="popup_protect__list">
-                                        <li class="popup_protect__list-item">Prevention of car theft</li>
-                                        <li class="popup_protect__list-item">How to protect yourself from theft numbers</li>
-                                        <li class="popup_protect__list-item">What should I do if the car took the tow truck</li>
-                                        <li class="popup_protect__list-item">How to protect the car against vandalism and theft.</li>
-                                        <li class="popup_protect__list-item">How to ensure long engine life.</li>
+                                        <li class="popup_protect__list-item">Dial *247#</li>
+                                        <li class="popup_protect__list-item">Go to payment option</li>
+                                        <li class="popup_protect__list-item">Enter 0181818181 as a merchant number</li>
+                                        <li class="popup_protect__list-item">Confirm Payment</li>
+                                        <li class="popup_protect__list-item">Save the Transaction Number</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-6">
+                                <div class="col-sm-12">
                                     <div class="form__row row">
                                         <div class="col-md-12">
                                             <div class="control-group control-group_fullwidth">
@@ -322,7 +320,7 @@
                                                 </span>
                                                 <span class="inp">
                                                     <span class="inp__box">
-                                                        <input class="inp__control" type="text" name="n" placeholder="Enter your name" />
+                                                        <input class="inp__control" type="text" name="student_name" placeholder="Enter your name" />
                                                     </span>
                                                 </span>
                                             </div>
@@ -336,7 +334,7 @@
                                                 </span>
                                                 <span class="inp">
                                                     <span class="inp__box">
-                                                        <input class="inp__control" type="email" name="s" placeholder="Enter your E-Mail" />
+                                                        <input class="inp__control" type="text" name="student_address" placeholder="Enter your address" />
                                                     </span>
                                                 </span>
                                             </div>
@@ -350,25 +348,29 @@
                                                 </span>
                                                 <span class="inp">
                                                     <span class="inp__box">
-                                                        <input class="inp__control" type="tel" name="a" placeholder="Enter your Phone" />
+                                                        <input class="inp__control" type="tel" name="student_address" placeholder="Enter your Phone" />
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form__row row">
+                                        <div class="col-md-12">
+                                            <div class="control-group control-group_fullwidth">
+                                                <span class="control-remark control-group__item">
+                                                    <svg class="control-remark__icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{asset('assets')}}/images/icon.svg#icon_phone"></use></svg>
+                                                </span>
+                                                <span class="inp">
+                                                    <span class="inp__box">
+                                                        <input class="inp__control" type="tel" name="transaction_number" placeholder="Transaction Number" />
                                                     </span>
                                                 </span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="popup_protect__radios col-sm-6">
-                                    <div class="popup_protect__radio radio">
-                                        <input type="radio" name="radio" id="radio-1" />
-                                        <label for="radio-1" class="radio__label"></label>
-                                        <p class="radio__text">Automat</p>
-                                    </div>
-                                    <div class="popup_protect__radio radio">
-                                        <input type="radio" checked name="radio" id="radio-2" />
-                                        <label for="radio-2" class="radio__label"></label>
-                                        <p class="radio__text">Mechanic</p>
-                                    </div>
-                                </div>
+                               
                             </div>
                             <div class="form__row row">
                                 <div class="col-md-12">
