@@ -9,7 +9,7 @@
                             <div class="row">
                                 <div class="col-md-3">
                                     <figure class="card__fig">
-                                        <img src="{{asset('images')}}/{{$course->image}}" alt="" />
+                                        <img width="100%" height = "100%" src="{{asset('images')}}/{{$course->image}}" alt="" />
                                     </figure>
                                 </div>
                                 <div class="col-md-9">
@@ -26,8 +26,10 @@
                                                 <div class="card__price-item"><span class="card__price-value">{{$course->price}} </span>BDT</div>
                                                
                                             </div>
+                                          
                                             <div class="card__btn-wrap col-md-5 col-lg-6">
                                                 <a class="btn card__btn popup-protect-btn" href="#">
+                                                <input id="course_id" type="hidden" value="{{$course->id}}">
                                                     <span class="btn__text">Apply for this course</span>
                                                 </a>
                                             </div>

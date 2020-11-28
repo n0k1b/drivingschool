@@ -7,6 +7,11 @@ use App\Models\fee;
 
 class feeController extends Controller
 {
+    public function submit_application(Request $request)
+    {
+       fee::create($request->all());
+    }
+
     public function index()
     {
         return view('admin.fees',['fees'=>fee::all()]);

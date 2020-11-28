@@ -21,7 +21,7 @@ class CreateFeesTable extends Migration
             $table->string('student_address');
             $table->integer('fee_confirmation')->default(0);
             $table->integer('course_complete_status')->default(0);
-            $table->string('tranaction_number');
+            $table->string('transaction_number');
             $table->timestamps();
             $table->foreign('course_id')->references('id')->on('courses')->onDelete('cascade');
         });

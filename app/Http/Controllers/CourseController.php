@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\course;
-
+use App\Models\fee;
 class CourseController extends Controller
 {
 
+    
     public function view_course()
-    {
+    {  
+        
         return view('course',['courses'=>course::all()]);
     }
     public function index()

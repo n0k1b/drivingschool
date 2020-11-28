@@ -16,7 +16,7 @@
 <div class="card">
     <div class="card-header d-flex justify-content-between align-items-">
         <h3></h3>
-        <a class="btn btn-primary" href="{{url('admin/add-fee')}}">Add Fee</a>
+        <!-- <a class="btn btn-primary" href="{{url('admin/add-fee')}}">Add Fee</a> -->
     </div>
     <div class="card-body">
         @if (session('message'))
@@ -31,8 +31,8 @@
                         <th>Name</th>
                         <th>Mobile</th>
                         <th>Address</th>
-                        <th>Fee confirmation</th>
-                        <th>Course complete status</th>
+                        <th>Transaction Number</th>
+                       
                     </tr>
                 </thead>
                 <tbody>
@@ -43,8 +43,8 @@
                         <td>{{$fee->student_name}}</td>
                         <td>{{$fee->student_mobile}}</td>
                         <td>{{$fee->student_address}}</td>
-                        <td>{{$fee->fee_confirmation}}</td>
-                        <td>{{$fee->course_complete_status}}</td>
+                        <td>{{$fee->transaction_number}}</td>
+                        
                     </tr>
                     @endforeach
                 </tbody>

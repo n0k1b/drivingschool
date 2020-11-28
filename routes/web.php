@@ -19,6 +19,8 @@ use Illuminate\Support\Facades\Route;
 Route::view('/','home');
 Route::view('feature','feature');
 Route::get('course','CourseController@view_course');
+Route::get('instructor','InstructorController@view_all_instructor');
+Route::post('submit_application','FeeController@submit_application');
 
 
 Route::view('admin','admin.dashboard');

@@ -7,6 +7,10 @@ use App\Models\instructor;
 
 class InstructorController extends Controller
 {
+    public function view_all_instructor()
+    {
+        return view('instructor',['instructors'=>instructor::all()]);
+    }
     public function index()
     {
         return view('admin.instructors',['instructors'=>instructor::all()]);

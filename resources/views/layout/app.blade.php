@@ -6,6 +6,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, minimal-ui" />
         <title>Driving School</title>
+        
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name="imagetoolbar" content="no" />
         <meta name="msthemecompatible" content="no" />
         <meta name="cleartype" content="on" />
@@ -313,6 +315,8 @@
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="form__row row">
+                                    <form action="{{url('submit_application')}}" method="POST">
+                                    @csrf
                                         <div class="col-md-12">
                                             <div class="control-group control-group_fullwidth">
                                                 <span class="control-remark control-group__item">
@@ -320,7 +324,7 @@
                                                 </span>
                                                 <span class="inp">
                                                     <span class="inp__box">
-                                                        <input class="inp__control" type="text" name="student_name" placeholder="Enter your name" />
+                                                        <input class="inp__control" type="text" id="student_name" placeholder="Enter your name" />
                                                     </span>
                                                 </span>
                                             </div>
@@ -334,7 +338,7 @@
                                                 </span>
                                                 <span class="inp">
                                                     <span class="inp__box">
-                                                        <input class="inp__control" type="text" name="student_address" placeholder="Enter your address" />
+                                                        <input class="inp__control" type="text" id="student_address" placeholder="Enter your address" />
                                                     </span>
                                                 </span>
                                             </div>
@@ -348,7 +352,7 @@
                                                 </span>
                                                 <span class="inp">
                                                     <span class="inp__box">
-                                                        <input class="inp__control" type="tel" name="student_address" placeholder="Enter your Phone" />
+                                                        <input class="inp__control" type="tel" id="student_mobile" placeholder="Enter your Phone" />
                                                     </span>
                                                 </span>
                                             </div>
@@ -363,7 +367,7 @@
                                                 </span>
                                                 <span class="inp">
                                                     <span class="inp__box">
-                                                        <input class="inp__control" type="tel" name="transaction_number" placeholder="Transaction Number" />
+                                                        <input class="inp__control" type="tel" id="transaction_number" placeholder="Transaction Number" />
                                                     </span>
                                                 </span>
                                             </div>
@@ -374,11 +378,12 @@
                             </div>
                             <div class="form__row row">
                                 <div class="col-md-12">
-                                    <button class="btn btn_fullwidth" type="submit">
-                                        <span class="btn__text">send request</span>
+                                    <button class="btn btn_fullwidth" type="button" onclick = "test()">
+                                        <span class="btn__text">Send</span>
                                     </button>
                                 </div>
                             </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -475,13 +480,13 @@
                             <li class="nav__item">
                                 <a href="{{url('course')}}" class="nav__link">courses</a>
                             </li>
-                            <li class="nav__item">
+                            <!-- <li class="nav__item">
                                 <a href="review.html" class="nav__link">reviews</a>
-                            </li>
-                            <li class="nav__item">
+                            </li> -->
+                            <!-- <li class="nav__item">
                                 <a href="photo.html" class="nav__link">photo</a>
-                            </li>
-                            <li class="nav__item">
+                            </li> -->
+                            <!-- <li class="nav__item">
                                 <a href="blog.html" class="nav__link nav__link_has-sub">blog</a>
                                 <ul class="nav__sub">
                                     <li class="nav__item">
@@ -491,20 +496,12 @@
                                         <a href="article.html" class="nav__link">Single Blog</a>
                                     </li>
                                 </ul>
-                            </li>
-                            <li class="nav__item">
+                            </li> -->
+                            <!-- <li class="nav__item">
                                 <a href="address.html" class="nav__link">contacts</a>
-                            </li>
+                            </li> -->
                             <li class="nav__item">
-                                <a href="teachers.html" class="nav__link nav__link_has-sub">teachers</a>
-                                <ul class="nav__sub">
-                                    <li class="nav__item">
-                                        <a href="teachers.html" class="nav__link">teachers</a>
-                                    </li>
-                                    <li class="nav__item">
-                                        <a href="teacher.html" class="nav__link">Teacher Profile</a>
-                                    </li>
-                                </ul>
+                                <a href="{{url('instructor')}}" class="nav__link">Instructor</a>
                             </li>
                         </ul>
                     </div>
@@ -693,6 +690,37 @@
         <script src="{{asset('assets')}}/scripts/isotope.pkgd.min.js"></script>
         <script src="{{asset('assets')}}/scripts/app.js"></script>
     </body>
-
+  
     <!-- Mirrored from drivingschool.wpmix.net/html/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Oct 2020 09:38:48 GMT -->
 </html>
+<script>
+$(function () {
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+    console.log("Jquery running!");
+    ownerLoginRequests();
+})
+ function test()
+ {
+     var formdata = new FormData();
+     formdata.append('student_name',$("#student_name").val());
+     formdata.append('student_mobile',$("#student_mobile").val());
+     formdata.append('student_address',$("#student_address").val());
+     formdata.append('transaction_number',$("#transaction_number").val());
+     formdata.append('course_id',$("#course_id").val());
+    $.ajax({
+        processData: false,
+        contentType: false,
+        type: 'POST',
+        data:formdata,
+        url: 'submit_application',
+        success: function (data) {
+          alert('Application Submited');
+          location.reload();
+        }
+    })
+ }
+</script> 
