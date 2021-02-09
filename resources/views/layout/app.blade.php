@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
-  
+
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, minimal-ui" />
         <title>Driving School</title>
-        
+
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name="imagetoolbar" content="no" />
         <meta name="msthemecompatible" content="no" />
@@ -20,6 +20,38 @@
         <link href="{{asset('assets')}}/images/icons/favicon.ico" rel="icon" />
         <meta name="description" content="" />
         <link href="{{asset('assets')}}/styles/app.css" rel="stylesheet" />
+        <style>
+            .tab_li {
+    display: block;
+    float: left;
+    width: 200px;
+    /* adjust */
+    height: 50px;
+    /* adjust */
+    padding: 5px;
+    /*adjust*/
+}
+
+.tab-group {
+    justify-content: center;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 -8px 0;
+}
+
+.tab.active a {
+    background: #3FC979;
+    padding: 15px;
+    color: white;
+}
+
+
+
+.tab-content>div:last-child {
+    display: none;
+}
+        </style>
     </head>
     <body class="page">
         <div class="popup popup_narrow popup_usual">
@@ -292,7 +324,7 @@
                         </div>
                         <div class="popup__body">
                             <div class="popup_protect__top row">
-                               
+
                                 <div class="popup_protect__data col-lg-8 col-md-7">
                                     <div class="popup_protect__def row">
                                         <div class="popup_protect__def__img col">
@@ -300,23 +332,116 @@
                                         </div>
                                         <div class="popup_protect__def__text col">
                                             <div class="popup_protect__def__title">How to pay fee</div>
-                                            
+
                                         </div>
                                     </div>
-                                    <ul class="popup_protect__list">
-                                        <li class="popup_protect__list-item">Dial *247#</li>
-                                        <li class="popup_protect__list-item">Go to payment option</li>
-                                        <li class="popup_protect__list-item">Enter 0181818181 as a merchant number</li>
-                                        <li class="popup_protect__list-item">Confirm Payment</li>
-                                        <li class="popup_protect__list-item">Save the Transaction Number</li>
+
+                                    <ul class="tab-group">
+                                        <li class="tab active tab_li"><a href="#bkash">Bkash</a></li>
+                                        <li class="tab tab_li"><a href="#visa_card">Debit Card</a></li>
                                     </ul>
+
+                                    <div class="tab-content">
+                                        <div id="bkash">
+                                            <ul class="popup_protect__list">
+                                                <li class="popup_protect__list-item">Dial *247#</li>
+                                                <li class="popup_protect__list-item">Go to payment option</li>
+                                                <li class="popup_protect__list-item">Enter 0181818181 as a merchant number</li>
+                                                <li class="popup_protect__list-item">Confirm Payment</li>
+                                                <li class="popup_protect__list-item">Save the Transaction Number</li>
+                                            </ul>
+                                            <div class="form__row row">
+                                                <div class="col-md-12">
+                                                    <div class="control-group control-group_fullwidth">
+                                                        <span class="control-remark control-group__item">
+                                                            <svg class="control-remark__icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{asset('assets')}}/images/icon.svg#icon_phone"></use></svg>
+                                                        </span>
+                                                        <span class="inp">
+                                                            <span class="inp__box">
+                                                                <input class="inp__control" type="tel" id="transaction_number" placeholder="Transaction Number" />
+                                                            </span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="visa_card">
+                                            <div class="form__row row">
+
+
+                                                    <div class="control-group control-group_fullwidth">
+                                                        <span class="control-remark control-group__item">
+
+                                                        </span>
+                                                        <span class="inp">
+                                                            <span class="inp__box">
+                                                                <input class="inp__control" type="text"  placeholder="Name on your card" />
+                                                            </span>
+                                                        </span>
+                                                    </div>
+
+                                            </div>
+
+                                            <div class="form__row row">
+
+
+                                                    <div class="control-group control-group_fullwidth">
+                                                        <span class="control-remark control-group__item">
+
+                                                        </span>
+                                                        <span class="inp">
+                                                            <span class="inp__box">
+                                                                <input class="inp__control" type="text"  placeholder="Card Number" />
+                                                            </span>
+                                                        </span>
+                                                    </div>
+
+                                            </div>
+
+                                            <div class="form__row row">
+
+
+                                                    <div class="control-group control-group_fullwidth">
+                                                        <span class="control-remark control-group__item">
+
+                                                        </span>
+                                                        <span class="inp">
+                                                            <span class="inp__box">
+                                                                <input class="inp__control" type="text" placeholder="MM/YY" />
+                                                            </span>
+                                                        </span>
+                                                    </div>
+
+                                            </div>
+
+                                            <div class="form__row row">
+
+
+                                                    <div class="control-group control-group_fullwidth">
+                                                        <span class="control-remark control-group__item">
+
+                                                        </span>
+                                                        <span class="inp">
+                                                            <span class="inp__box">
+                                                                <input class="inp__control" type="text"  placeholder="CVC" />
+                                                            </span>
+                                                        </span>
+                                                    </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <div class="form__row row">
                                     <form action="{{url('submit_application')}}" method="POST">
-                                    @csrf
+                                        @csrf
+                                    <div class="form__row row">
+
                                         <div class="col-md-12">
                                             <div class="control-group control-group_fullwidth">
                                                 <span class="control-remark control-group__item">
@@ -367,14 +492,55 @@
                                                 </span>
                                                 <span class="inp">
                                                     <span class="inp__box">
-                                                        <input class="inp__control" type="tel" id="transaction_number" placeholder="Transaction Number" />
+                                                        <input class="inp__control" type="tel" id="student_mobile" placeholder="Enter your Phone" />
                                                     </span>
                                                 </span>
                                             </div>
                                         </div>
                                     </div>
+
+
+                                    <div class="form__row row">
+                                        <div class="col-md-12">
+                                            <div class="control-group control-group_fullwidth">
+                                                <span class="control-remark control-group__item">
+                                                    <svg class="control-remark__icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{asset('assets')}}/images/icon.svg#icon_calendar"></use></svg>
+                                                </span>
+                                                <span class="inp">
+                                                    <span class="inp__box">
+                                                      <select id="day_slot" >
+                                                            <option selected disabled>Select Day Slot</option>
+                                                            <option value="saturday,monday,wednesday">Saturdat,Monday,Wednesday</option>
+                                                            <option value="sunday,tuesday,thursday">Sunday,Tuesday,Thursday</option>
+                                                      </select>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form__row row">
+                                        <div class="col-md-12">
+                                            <div class="control-group control-group_fullwidth">
+                                                <span class="control-remark control-group__item">
+                                                    <svg class="control-remark__icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{asset('assets')}}/images/icon.svg#icon_calendar"></use></svg>
+                                                </span>
+                                                <span class="inp">
+                                                    <span class="inp__box">
+                                                      <select id="time_slot" >
+                                                            <option selected disabled>Select Time Slot</option>
+                                                            <option value="10am-1pm">10am-1pm</option>
+                                                            <option value="2pm-5pm">2pm-5pm</option>
+                                                      </select>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
                                 </div>
-                               
+
                             </div>
                             <div class="form__row row">
                                 <div class="col-md-12">
@@ -469,14 +635,14 @@
                         <ul class="nav__list">
                             <li class="nav__item">
                                 <a href="{{url('/')}}" class="nav__link nav__link_has-sub nav__link_active">Home</a>
-                                
+
                             </li>
-                            
+
                             <li class="nav__item">
                                 <a href="{{url('feature')}}" class="nav__link">features</a>
                             </li>
-                            
-                           
+
+
                             <li class="nav__item">
                                 <a href="{{url('course')}}" class="nav__link">courses</a>
                             </li>
@@ -509,10 +675,10 @@
             </div>
         </div>
         @yield('content')
-       
 
-       
-      
+
+
+
         <div class="footer">
             <div class="nav">
                 <div class="nav__btn-wrap">
@@ -522,7 +688,7 @@
                         </span>
                     </button>
                 </div>
-                
+
             </div>
             <div class="footer__body container">
                 <div class="row">
@@ -690,10 +856,28 @@
         <script src="{{asset('assets')}}/scripts/isotope.pkgd.min.js"></script>
         <script src="{{asset('assets')}}/scripts/app.js"></script>
     </body>
-  
+
     <!-- Mirrored from drivingschool.wpmix.net/html/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Oct 2020 09:38:48 GMT -->
 </html>
 <script>
+    $('.tab a').on('click', function(e) {
+
+        e.preventDefault();
+
+        $(this).parent().addClass('active');
+        $(this).parent().siblings().removeClass('active');
+
+        target = $(this).attr('href');
+
+        $('.tab-content > div').not(target).hide();
+
+        $(target).fadeIn(600);
+
+    });
+</script>
+<script>
+
+
 $(function () {
     $.ajaxSetup({
         headers: {
@@ -701,7 +885,6 @@ $(function () {
         }
     });
     console.log("Jquery running!");
-    ownerLoginRequests();
 })
  function test()
  {
@@ -711,6 +894,10 @@ $(function () {
      formdata.append('student_address',$("#student_address").val());
      formdata.append('transaction_number',$("#transaction_number").val());
      formdata.append('course_id',$("#course_id").val());
+
+    formdata.append('time_slot',$("#time_slot").val());
+    formdata.append('day_slot',$("#day_slot").val());
+
     $.ajax({
         processData: false,
         contentType: false,
@@ -723,4 +910,4 @@ $(function () {
         }
     })
  }
-</script> 
+</script>

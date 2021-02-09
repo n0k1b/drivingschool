@@ -24,9 +24,9 @@
                                         <div class="row">
                                             <div class="card__price col-md-7 col-lg-6">
                                                 <div class="card__price-item"><span class="card__price-value">{{$course->price}} </span>BDT</div>
-                                               
+
                                             </div>
-                                          
+
                                             <div class="card__btn-wrap col-md-5 col-lg-6">
                                                 <a class="btn card__btn popup-protect-btn" href="#">
                                                 <input id="course_id" type="hidden" value="{{$course->id}}">
@@ -41,10 +41,10 @@
                     </div>
                 </li>
                 @endforeach
-              
-              
-                
+
+
+
             </ul>
-          
+
         </div>
 @endsection

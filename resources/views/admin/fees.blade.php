@@ -31,8 +31,9 @@
                         <th>Name</th>
                         <th>Mobile</th>
                         <th>Address</th>
-                        <th>Transaction Number</th>
-                       
+                        <th>Time Slot</th>
+                        <th>Day Slot</th>
+
                     </tr>
                 </thead>
                 <tbody>
@@ -43,8 +44,9 @@
                         <td>{{$fee->student_name}}</td>
                         <td>{{$fee->student_mobile}}</td>
                         <td>{{$fee->student_address}}</td>
-                        <td>{{$fee->transaction_number}}</td>
-                        
+                        <td>{{$fee->time_slot}}</td>
+                        <td>{{$fee->day_slot}}</td>
+
                     </tr>
                     @endforeach
                 </tbody>
