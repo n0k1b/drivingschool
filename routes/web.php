@@ -18,14 +18,23 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::view('/','home');
 Route::view('feature','feature');
+Route::view('advice','advice');
+Route::get('login','AuthController@index')->name('login-view');
+
 Route::get('course','CourseController@view_course');
 Route::get('instructor','InstructorController@view_all_instructor');
 Route::post('submit_application','FeeController@submit_application');
+Route::post('login','AuthController@login')->name('login');
+Route::get('logout','AuthController@logout')->name('logout');
 
 
-Route::view('admin','admin.dashboard');
+//Route::view('admin','admin.dashboard');
 
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['prefix' => 'admin','middleware' =>'auth'], function () {
+
+    Route::get('/', function () {
+    return view('admin.dashboard');
+    });
     Route::get('/courses','CourseController@index');
     Route::view('/add-course','admin.addCourse');
     Route::post('/add-course','CourseController@addCourse');

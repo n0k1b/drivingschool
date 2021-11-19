@@ -19,7 +19,7 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <link href="{{asset('assets')}}/images/icons/favicon.ico" rel="icon" />
         <meta name="description" content="" />
-        <link href="{{asset('assets')}}/styles/app.css" rel="stylesheet" />
+        <link href="{{asset('assets')}}/styles/app.css?{{ time() }}" rel="stylesheet" />
         <style>
             .tab_li {
     display: block;
@@ -343,6 +343,7 @@
 
                                     <div class="tab-content">
                                         <div id="bkash">
+                                            <input type="hidden" id="payment_method" value="bkash">
                                             <ul class="popup_protect__list">
                                                 <li class="popup_protect__list-item">Dial *247#</li>
                                                 <li class="popup_protect__list-item">Go to payment option</li>
@@ -366,6 +367,7 @@
                                             </div>
                                         </div>
                                         <div id="visa_card">
+                                            <input type="hidden" id="payment_method" value="visa_card">
                                             <div class="form__row row">
 
 
@@ -556,44 +558,7 @@
             </div>
             <div class="popup__bg"></div>
         </div>
-        <div class="bar-social">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 hidden-xs">
-                        <p class="bar-social__text">Lessons From just $20 Per Hour or 5 Lessons for $120 or 10 Hours For $180</p>
-                    </div>
-                    <div class="col-md-6">
-                        <ul class="bar-social__list">
-                            <li class="bar-social__list-item">
-                                <a href="#" class="bar-social__link">
-                                    <svg class="bar-social__icon"><use xlink:href="{{asset('assets')}}/images/icon.svg#icon_vk"></use></svg>
-                                </a>
-                            </li>
-                            <li class="bar-social__list-item">
-                                <a href="#" class="bar-social__link">
-                                    <svg class="bar-social__icon"><use xlink:href="{{asset('assets')}}/images/icon.svg#icon_facebook"></use></svg>
-                                </a>
-                            </li>
-                            <li class="bar-social__list-item">
-                                <a href="#" class="bar-social__link">
-                                    <svg class="bar-social__icon"><use xlink:href="{{asset('assets')}}/images/icon.svg#icon_twitter"></use></svg>
-                                </a>
-                            </li>
-                            <li class="bar-social__list-item">
-                                <a href="#" class="bar-social__link">
-                                    <svg class="bar-social__icon"><use xlink:href="{{asset('assets')}}/images/icon.svg#icon_instagram"></use></svg>
-                                </a>
-                            </li>
-                            <li class="bar-social__list-item">
-                                <a href="#" class="bar-social__link">
-                                    <svg class="bar-social__icon"><use xlink:href="{{asset('assets')}}/images/icon.svg#icon_ok"></use></svg>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+
         <div class="header">
             <div class="header__row container">
                 <div class="row">
@@ -606,12 +571,12 @@
                     </div>
                     <div class="header__contact col-md-3">
                         <div class="header__address">
-                            <svg class="header__pin"><use xlink:href="{{asset('assets')}}/images/icon.svg#icon_pin"></use></svg>Matvey street, russia
+                            <svg class="header__pin"><use xlink:href="{{asset('assets')}}/images/icon.svg#icon_pin"></use></svg>Muradpur,Chittagong
                         </div>
                     </div>
                     <div class="header__contact col-md-2">
                         <a href="tel:+908887775544" class="header__phone">
-                            <svg class="header__phone-icon"><use xlink:href="{{asset('assets')}}/images/icon.svg#icon_phone"></use></svg>+ 90 888 777 5544
+                            <svg class="header__phone-icon"><use xlink:href="{{asset('assets')}}/images/icon.svg#icon_phone"></use></svg>+8801686976014
                         </a>
                     </div>
                     <div class="header__contact col-md-2">
@@ -642,6 +607,9 @@
                                 <a href="{{url('feature')}}" class="nav__link">features</a>
                             </li>
 
+                            <li class="nav__item">
+                                <a href="{{url('advice')}}" class="nav__link">Advice</a>
+                            </li>
 
                             <li class="nav__item">
                                 <a href="{{url('course')}}" class="nav__link">courses</a>
@@ -707,90 +675,10 @@
                         </div>
                     </div>
                     <div class="footer__section col-md-3">
-                        <div class="footer__blog">
-                            <h4 class="footer__title">blog</h4>
-                            <article class="footer__post">
-                                <a href="#" class="footer__post-wrap">
-                                    <h5 class="footer__post-title">Mountains car travel</h5>
-                                    <p class="footer__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...</p>
-                                </a>
-                            </article>
-                            <article class="footer__post">
-                                <a href="#" class="footer__post-wrap">
-                                    <h5 class="footer__post-title">Mountains car travel</h5>
-                                    <p class="footer__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...</p>
-                                </a>
-                            </article>
-                            <a href="#" class="footer__more">
-                                See all posts
-                                <svg class="footer__more-icon"><use xlink:href="{{asset('assets')}}/images/icon.svg#icon_right"></use></svg>
-                            </a>
-                        </div>
+
                     </div>
                     <div class="footer__section col-md-3">
-                        <div class="footer__instagramm">
-                            <h4 class="footer__title">Instagram</h4>
-                            <ul class="footer__instagramm-list">
-                                <li class="footer__instagramm-item">
-                                    <a href="{{asset('assets')}}/images/inst/i1.jpg" class="footer__instagramm-link">
-                                        <svg class="zoom"><use xlink:href="{{asset('assets')}}/images/icon.svg#icon_search"></use></svg>
-                                        <img src="{{asset('assets')}}/images/inst/i1.jpg" alt="" />
-                                    </a>
-                                </li>
-                                <li class="footer__instagramm-item">
-                                    <a href="{{asset('assets')}}/images/inst/i2.jpg" class="footer__instagramm-link">
-                                        <svg class="zoom"><use xlink:href="{{asset('assets')}}/images/icon.svg#icon_search"></use></svg>
-                                        <img src="{{asset('assets')}}/images/inst/i2.jpg" alt="" />
-                                    </a>
-                                </li>
-                                <li class="footer__instagramm-item">
-                                    <a href="{{asset('assets')}}/images/inst/i3.jpg" class="footer__instagramm-link">
-                                        <svg class="zoom"><use xlink:href="{{asset('assets')}}/images/icon.svg#icon_search"></use></svg>
-                                        <img src="{{asset('assets')}}/images/inst/i3.jpg" alt="" />
-                                    </a>
-                                </li>
-                                <li class="footer__instagramm-item">
-                                    <a href="{{asset('assets')}}/images/inst/i4.jpg" class="footer__instagramm-link">
-                                        <svg class="zoom"><use xlink:href="{{asset('assets')}}/images/icon.svg#icon_search"></use></svg>
-                                        <img src="{{asset('assets')}}/images/inst/i4.jpg" alt="" />
-                                    </a>
-                                </li>
-                                <li class="footer__instagramm-item">
-                                    <a href="{{asset('assets')}}/images/inst/i5.jpg" class="footer__instagramm-link">
-                                        <svg class="zoom"><use xlink:href="{{asset('assets')}}/images/icon.svg#icon_search"></use></svg>
-                                        <img src="{{asset('assets')}}/images/inst/i5.jpg" alt="" />
-                                    </a>
-                                </li>
-                                <li class="footer__instagramm-item">
-                                    <a href="{{asset('assets')}}/images/inst/i6.jpg" class="footer__instagramm-link">
-                                        <svg class="zoom"><use xlink:href="{{asset('assets')}}/images/icon.svg#icon_search"></use></svg>
-                                        <img src="{{asset('assets')}}/images/inst/i6.jpg" alt="" />
-                                    </a>
-                                </li>
-                                <li class="footer__instagramm-item">
-                                    <a href="{{asset('assets')}}/images/inst/i7.jpg" class="footer__instagramm-link">
-                                        <svg class="zoom"><use xlink:href="{{asset('assets')}}/images/icon.svg#icon_search"></use></svg>
-                                        <img src="{{asset('assets')}}/images/inst/i7.jpg" alt="" />
-                                    </a>
-                                </li>
-                                <li class="footer__instagramm-item">
-                                    <a href="{{asset('assets')}}/images/inst/i8.jpg" class="footer__instagramm-link">
-                                        <svg class="zoom"><use xlink:href="{{asset('assets')}}/images/icon.svg#icon_search"></use></svg>
-                                        <img src="{{asset('assets')}}/images/inst/i8.jpg" alt="" />
-                                    </a>
-                                </li>
-                                <li class="footer__instagramm-item">
-                                    <a href="{{asset('assets')}}/images/inst/i9.jpg" class="footer__instagramm-link">
-                                        <svg class="zoom"><use xlink:href="{{asset('assets')}}/images/icon.svg#icon_search"></use></svg>
-                                        <img src="{{asset('assets')}}/images/inst/i9.jpg" alt="" />
-                                    </a>
-                                </li>
-                            </ul>
-                            <a href="#" class="footer__more">
-                                See all posts
-                                <svg class="footer__more-icon"><use xlink:href="{{asset('assets')}}/images/icon.svg#icon_right"></use></svg>
-                            </a>
-                        </div>
+
                     </div>
                     <div class="footer__section col-md-3">
                         <div class="footer__hours">
@@ -894,6 +782,7 @@ $(function () {
      formdata.append('student_address',$("#student_address").val());
      formdata.append('transaction_number',$("#transaction_number").val());
      formdata.append('course_id',$("#course_id").val());
+     formdata.append('payment_method',$("#payment_method").val());
 
     formdata.append('time_slot',$("#time_slot").val());
     formdata.append('day_slot',$("#day_slot").val());

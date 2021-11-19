@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="csrf-token" content="{{ csrf_token() }}">
-  <title>Melody Admin</title>
+  <title>Driving School Admin</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="{{ asset('assets/melody') }}/vendors/iconfonts/font-awesome/css/all.min.css">
   <link rel="stylesheet" href="{{ asset('assets/melody') }}/vendors/css/vendor.bundle.base.css">
@@ -103,7 +103,7 @@
             </a>
           </li>
           <li class="nav-item d-lg-flex">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{{ route('logout') }}">
               <span class="btn btn-primary">Logout</span>
             </a>
           </li>

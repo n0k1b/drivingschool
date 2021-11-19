@@ -23,7 +23,7 @@
                                     <svg class="feature__price"><use xlink:href="{{asset('assets')}}/images/icon.svg#icon_price"></use></svg>
                                 </div>
                                 <h3 class="feature__title">best service</h3>
-                                <p class="feature__desc">Lorem ipsum Sunt cupidatat reprehenderit cillum reprehenderit incididunt consequat</p>
+                                <p class="feature__desc">Provide best service to skill up</p>
                             </div>
                             <div class="feature__item col-md-3">
                                 <div class="feature__icon">
@@ -83,6 +83,6 @@
                         </div>
                     </div>
                 </div>
-           
+
         </div>
 @endsection

@@ -32,6 +32,8 @@
                         <th>Mobile</th>
                         <th>Address</th>
                         <th>Time Slot</th>
+                        <th>Transaction Number</th>
+                        <th>Payment Method</th>
                         <th>Day Slot</th>
 
                     </tr>
@@ -45,6 +47,8 @@
                         <td>{{$fee->student_mobile}}</td>
                         <td>{{$fee->student_address}}</td>
                         <td>{{$fee->time_slot}}</td>
+                        <td>{{$fee->transaction_number}}</td>
+                        <td>{{$fee->payment_method}}</td>
                         <td>{{$fee->day_slot}}</td>
 
                     </tr>

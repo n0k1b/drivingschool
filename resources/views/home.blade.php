@@ -3,15 +3,29 @@
 <div class="tiser">
             <div id="tiserSlider" class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div style="background-image: url(assets/images/tiser/tiser1.jpg);" class="tiser__slide swiper-slide">
+                    <div style="background-image: url(assets/images/tiser/tiser2.jpg);" class="tiser__slide swiper-slide">
                         <div class="tiser__body">
                             <div class="container">
                                 <div class="row">
                                     <div class="tiser__body-inner">
                                         <div class="tiser__title-wrap">
-                                            <h3 class="tiser__title">BEST SAFETY MEASURES</h3>
+                                            <h3 class="tiser__title">Auto Car Driving</h3>
                                         </div>
-                                        <p class="tiser__desc">Lorem ipsum Sunt cupidatat reprehenderit cillum reprehenderit incididunt consequat aute et proident tempor occaecat.</p>
+                                        <p class="tiser__desc">Life is always a bumpy road, Eventually you just learn how to drive it</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="background-image: url(assets/images/tiser/tiser3.jpg);" class="tiser__slide swiper-slide">
+                        <div class="tiser__body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="tiser__body-inner">
+                                        <div class="tiser__title-wrap">
+                                            <h3 class="tiser__title">Manual Car Driving</h3>
+                                        </div>
+                                        <p class="tiser__desc">Two wheels move the body, four wheel move your heart</p>
                                     </div>
                                 </div>
                             </div>
@@ -23,23 +37,9 @@
                                 <div class="row">
                                     <div class="tiser__body-inner">
                                         <div class="tiser__title-wrap">
-                                            <h3 class="tiser__title">BEST SAFETY MEASURES</h3>
+                                            <h3 class="tiser__title">Bike Driving</h3>
                                         </div>
-                                        <p class="tiser__desc">Lorem ipsum Sunt cupidatat reprehenderit cillum reprehenderit incididunt consequat aute et proident tempor occaecat.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="background-image: url(assets/images/tiser/tiser1.jpg);" class="tiser__slide swiper-slide">
-                        <div class="tiser__body">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="tiser__body-inner">
-                                        <div class="tiser__title-wrap">
-                                            <h3 class="tiser__title">BEST SAFETY MEASURES</h3>
-                                        </div>
-                                        <p class="tiser__desc">Lorem ipsum Sunt cupidatat reprehenderit cillum reprehenderit incididunt consequat aute et proident tempor occaecat.</p>
+                                        <p class="tiser__desc">Stop worryings about the potholes in the road and enjoy the journey.</p>
                                     </div>
                                 </div>
                             </div>
@@ -51,13 +51,13 @@
                 <div class="container">
                     <div class="tiser__pager-item tiser__pager-item_active">
                         <svg class="tiser__car"><use xlink:href="assets/images/icon.svg#icon_car2"></use></svg>
-                        <div class="tiser__pager-name">Auto Car Driving</div>
-                        <div class="tiser__pager-desc">Car driving learn</div>
+                        <div class="tiser__pager-name">Light vehicle</div>
+                        <div class="tiser__pager-desc">Light Vehicle Driving</div>
                     </div>
                     <div class="tiser__pager-item">
                         <svg class="tiser__truck"><use xlink:href="assets/images/icon.svg#icon_truck"></use></svg>
-                        <div class="tiser__pager-name">Manual Car Driving</div>
-                        <div class="tiser__pager-desc">Manual Car driving learn</div>
+                        <div class="tiser__pager-name">Heavy Vehicle</div>
+                        <div class="tiser__pager-desc">Heavy Vehicle Driving</div>
                     </div>
                     <div class="tiser__pager-item">
                         <svg class="tiser__bus"><use xlink:href="assets/images/icon.svg#icon_bus"></use></svg>
@@ -78,11 +78,11 @@
             </div>
             <div class="tiser__find">
                 <div class="container">
-                 
+
                 </div>
             </div>
         </div>
- 
+
         <div class="about">
             <div class="container">
                 <div class="row">
@@ -96,7 +96,7 @@
                             </div>
                         </div>
                     </div>
-                   
+
                 </div>
             </div>
         </div>
@@ -169,6 +169,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
         <div class="numbers">
             <div class="container">
@@ -194,141 +195,7 @@
                 </div>
             </div>
         </div>
-        
-        <div class="review">
-            <div class="review__container container">
-                <div class="row">
-                    <h2 class="title review__title">
-                        <span class="title__mark">REVIEWS</span>
-                    </h2>
-                    <div class="review__pager">
-                        <div class="review__pager-item">
-                            <img src="assets/images/reviewer/r1.jpg" alt="Andry Lincoln" />
-                        </div>
-                        <div class="review__pager-item">
-                            <img src="assets/images/reviewer/r2.jpg" alt="Andry Lincoln" />
-                        </div>
-                        <div class="review__pager-item">
-                            <img src="assets/images/reviewer/r3.jpg" alt="Andry Lincoln" />
-                        </div>
-                        <div class="review__pager-item">
-                            <img src="assets/images/reviewer/r4.jpg" alt="Andry Lincoln" />
-                        </div>
-                        <div class="review__pager-item">
-                            <img src="assets/images/reviewer/r1.jpg" alt="Andry Lincoln" />
-                        </div>
-                    </div>
-                    <div id="reviewSlider" class="review__list swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="review__list-item col-md-12 col-lg-10 col-lg-offset-1">
-                                    <blockquote class="review__block">
-                                        <div class="review__block-body">
-                                            <div class="review__block-text">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore tempor incididun dolore tempor magna aliqua</p>
-                                            </div>
-                                            <footer class="review__block-footer">
-                                                <div class="review__author">Andry Lincoln</div>
-                                            </footer>
-                                            <div class="review__styler">
-                                                <svg class="review__styler-icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
-                                                <svg class="review__styler-icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
-                                                <svg class="review__styler-icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
-                                                <svg class="review__styler-icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
-                                                <svg class="review__styler-icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
-                                            </div>
-                                        </div>
-                                    </blockquote>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="review__list-item col-md-12 col-lg-10 col-lg-offset-1">
-                                    <blockquote class="review__block">
-                                        <div class="review__block-body">
-                                            <div class="review__block-text">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore tempor incididun dolore tempor magna aliqua</p>
-                                            </div>
-                                            <footer class="review__block-footer">
-                                                <div class="review__author">Andry Lincoln</div>
-                                            </footer>
-                                            <div class="review__styler">
-                                                <svg class="review__styler-icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
-                                                <svg class="review__styler-icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
-                                                <svg class="review__styler-icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
-                                                <svg class="review__styler-icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
-                                                <svg class="review__styler-icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
-                                            </div>
-                                        </div>
-                                    </blockquote>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="review__list-item col-md-12 col-lg-10 col-lg-offset-1">
-                                    <blockquote class="review__block">
-                                        <div class="review__block-body">
-                                            <div class="review__block-text">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore tempor incididun dolore tempor magna aliqua</p>
-                                            </div>
-                                            <footer class="review__block-footer">
-                                                <div class="review__author">Andry Lincoln</div>
-                                            </footer>
-                                            <div class="review__styler">
-                                                <svg class="review__styler-icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
-                                                <svg class="review__styler-icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
-                                                <svg class="review__styler-icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
-                                                <svg class="review__styler-icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
-                                                <svg class="review__styler-icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
-                                            </div>
-                                        </div>
-                                    </blockquote>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="review__list-item col-md-12 col-lg-10 col-lg-offset-1">
-                                    <blockquote class="review__block">
-                                        <div class="review__block-body">
-                                            <div class="review__block-text">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore tempor incididun dolore tempor magna aliqua</p>
-                                            </div>
-                                            <footer class="review__block-footer">
-                                                <div class="review__author">Andry Lincoln</div>
-                                            </footer>
-                                            <div class="review__styler">
-                                                <svg class="review__styler-icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
-                                                <svg class="review__styler-icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
-                                                <svg class="review__styler-icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
-                                                <svg class="review__styler-icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
-                                                <svg class="review__styler-icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
-                                            </div>
-                                        </div>
-                                    </blockquote>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="review__list-item col-md-12 col-lg-10 col-lg-offset-1">
-                                    <blockquote class="review__block">
-                                        <div class="review__block-body">
-                                            <div class="review__block-text">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore tempor incididun dolore tempor magna aliqua</p>
-                                            </div>
-                                            <footer class="review__block-footer">
-                                                <div class="review__author">Andry Lincoln</div>
-                                            </footer>
-                                            <div class="review__styler">
-                                                <svg class="review__styler-icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
-                                                <svg class="review__styler-icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
-                                                <svg class="review__styler-icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
-                                                <svg class="review__styler-icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
-                                                <svg class="review__styler-icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
-                                            </div>
-                                        </div>
-                                    </blockquote>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
+
+
+
 @endsection
